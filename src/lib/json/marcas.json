@@ -1,0 +1,236 @@
+{
+    "partners": [
+        {
+            "id": 1,
+            "logo": "/Empresa/ABBOTT.png",
+            "pdfs": []
+        },
+        {
+            "id": 2,
+            "logo": "/Empresa/ALFARO.png",
+            "pdfs": []
+        },
+        {
+            "id": 3,
+            "logo": "/Empresa/COBEFAR.png",
+            "pdfs": []
+        },
+        {
+            "id": 4,
+            "logo": "/Empresa/DECO.png",
+            "pdfs": []
+        },
+        {
+            "id": 5,
+            "logo": "/Empresa/DICAR.png",
+            "pdfs": []
+        },
+        {
+            "id": 6,
+            "logo": "/Empresa/DIXEMA.png",
+            "pdfs": []
+        },
+        {
+            "id": 7,
+            "logo": "/Empresa/EUROFARMA.png",
+            "pdfs": []
+        },
+        {
+            "id": 8,
+            "logo": "/Empresa/IQFARMA.png",
+            "pdfs": []
+        },
+        {
+            "id": 9,
+            "logo": "/Empresa/LIPHARMA.png",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/LIPHARMA/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 10,
+            "logo": "/Empresa/ADIUM.png",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/ADIUM/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 11,
+            "logo": "/Empresa/AXIERTA.jpg",
+            "pdfs": []
+        },
+        {
+            "id": 12,
+            "logo": "/Empresa/ALKOFARMA.png",
+            "pdfs": []
+        },
+        {
+            "id": 13,
+            "logo": "/Empresa/INTI%20PHARMA.png",
+            "pdfs": []
+        },
+        {
+            "id": 14,
+            "logo": "/Empresa/JAM%20PHARMA.png",
+            "pdfs": []
+        },
+        {
+            "id": 15,
+            "logo": "/Empresa/LABORATORIOS%20AMERICANOS.png",
+            "pdfs": []
+        },
+        {
+            "id": 16,
+            "logo": "/Empresa/AC%20FARMA.png",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/AC%20FARMA/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 17,
+            "logo": "/Empresa/AVANX%20LAB.jpg",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/AVANX%20LAB/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 18,
+            "logo": "/Empresa/CAFERMA.png",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/CAFERMA/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 19,
+            "logo": "/Empresa/CORPOL.jpg",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/COORPOL/PDF1.pdf",
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/COORPOL/PDF2.pdf",
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/COORPOL/PDF3.pdf",
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/COORPOL/PDF4.pdf"
+            ]
+        },
+        {
+            "id": 20,
+            "logo": "/Empresa/DELFARMA.png",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/DELFARMA/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 21,
+            "logo": "/Empresa/DIPHASAC.png",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/DIPHASAC/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 22,
+            "logo": "/Empresa/DISTRIBUIDORA%20CONTINENTAL%206.jpg",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/DISTRIBUIDORA%20CONTINENTAL%206/PDF1.pdf",
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/DISTRIBUIDORA%20CONTINENTAL%206/PDF2.pdf"
+            ]
+        },
+        {
+            "id": 23,
+            "logo": "/Empresa/DISTRIBUIDORA%20DANY.jpg",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/DISTRIBUIDORA%20DANY/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 24,
+            "logo": "/Empresa/DUPERU.png",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/DUPERU/PDF1.pdf",
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/DUPERU/PDF2.pdf",
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/DUPERU/PDF3.pdf"
+            ]
+        },
+        {
+            "id": 25,
+            "logo": "/Empresa/HREPS.jpg",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/HREPS/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 26,
+            "logo": "/Empresa/LUSA.jpg",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/LUSA/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 27,
+            "logo": "/Empresa/VITAPHARMA.png",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/VITAPHARMA/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 28,
+            "logo": "/Empresa/LANSIER.png",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/LANSIER/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 29,
+            "logo": "/Empresa/MAVER.jpg",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/MAVER/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 30,
+            "logo": "/Empresa/NORDIC.jpg",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/NORDIC/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 31,
+            "logo": "/Empresa/PORTUGAL.png",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/PORTUGAL/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 32,
+            "logo": "/Empresa/QMPHARMA.jpg",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/QMPHARMA/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 33,
+            "logo": "/Empresa/QUIMFA.jpg",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/QUIMFA/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 34,
+            "logo": "/Empresa/SEVEN%20PHARMA.jpg",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/SEVEN%20PHARMA/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 35,
+            "logo": "/Empresa/TAMSAC%20GROUP.png",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/TAMSAC%20GROUP/PDF1.pdf"
+            ]
+        },
+        {
+            "id": 36,
+            "logo": "/Empresa/UNIMED.jpg",
+            "pdfs": [
+                "http://tsgroups.org/pdf%20zeng/Lista%20Proveedores/UNIMED/PDF1.pdf"
+            ]
+        }
+    ]
+}
