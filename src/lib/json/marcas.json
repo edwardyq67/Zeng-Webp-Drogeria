@@ -33,12 +33,12 @@
         {
             "id": 7,
             "logo": "/Empresa/EUROFARMA.png",
-            "pdfs": []
+            "pdfs": ["https://tsgroups.org/pdf%20zeng/Lista%20Proveedores/EUROFARMA/PDF1.pdf"]
         },
         {
             "id": 8,
             "logo": "/Empresa/IQFARMA.png",
-            "pdfs": []
+            "pdfs": ["https://tsgroups.org/pdf%20zeng/Lista%20Proveedores/IQFARMA/PDF1.pdf"]
         },
         {
             "id": 9,
@@ -67,7 +67,7 @@
         {
             "id": 13,
             "logo": "/Empresa/INTI%20PHARMA.png",
-            "pdfs": []
+            "pdfs": ["https://tsgroups.org/pdf%20zeng/Lista%20Proveedores/INTI%20PHARMA/PDF1.pdf"]
         },
         {
             "id": 14,

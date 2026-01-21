@@ -250,38 +250,37 @@ function HomePage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                             </div>
-
-                            {/* Tarjeta de reseñas */}
-                            <div className="bg-white p-5 rounded-xl border border-gray-100 shadow-sm -mt-10 mx-4 relative z-10">
-                                <div className="flex items-center justify-between">
-                                    <div className="flex items-center gap-3">
-                                        <div className="flex -space-x-3">
-                                            {[1, 2, 3].map((i) => (
-                                                <div key={i} className="w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                                                    <img
-                                                        src={`https://html.rometheme.net/pharmed/image/image-600x600-2${i}.jpg`}
-                                                        className="w-full h-full object-cover"
-                                                        alt={`Cliente ${i}`}
-                                                    />
-                                                </div>
-                                            ))}
+                            {/* Tarjeta de contacto WhatsApp */}
+                            <div className=" p-5 rounded-xl border shadow-sm -mt-10 mx-4 relative z-10">
+                                {/* Botones de WhatsApp */}
+                                <div className="flex justify-between gap-2">
+                                    <a
+                                        href="https://wa.me/51960330535"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-center gap-2 px-4 py-2.5 bg-[#25D366] text-white rounded-lg hover:bg-[#1da851] transition-all duration-300 hover:scale-[1.02] min-w-[180px]"
+                                    >
+                                        <i className="fab fa-whatsapp"></i>
+                                        <div className="text-left">
+                                            <div className="text-xs opacity-90">WhatsApp</div>
+                                            <div className="font-semibold">+51 960 330 535</div>
                                         </div>
-                                        <div>
-                                            <div className="flex gap-1 mb-1">
-                                                {[...Array(4)].map((_, i) => (
-                                                    <i key={i} className="fas fa-star text-yellow-400 text-sm"></i>
-                                                ))}
-                                                <i className="fas fa-star text-gray-300 text-sm"></i>
-                                            </div>
-                                            <p className="text-sm text-gray-600">1.5k+ Reseñas</p>
-                                        </div>
-                                    </div>
+                                    </a>
 
-                                    <button className="px-5 py-2.5 bg-primary text-white rounded-lg hover:bg-primary-600 transition-colors duration-300 text-sm font-medium flex items-center gap-2">
-                                        <span>Conocer Más</span>
-                                        <i className="fas fa-arrow-right text-xs"></i>
-                                    </button>
+                                    <a
+                                        href="https://wa.me/51938325277"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="flex items-center justify-center gap-2 px-4 py-2.5 bg-[#075E54] text-white rounded-lg hover:bg-[#064c43] transition-all duration-300 hover:scale-[1.02] min-w-[180px]"
+                                    >
+                                        <i className="fab fa-whatsapp"></i>
+                                        <div className="text-left">
+                                            <div className="text-xs opacity-90">WhatsApp</div>
+                                            <div className="font-semibold">+51 938 325 277</div>
+                                        </div>
+                                    </a>
                                 </div>
+
                             </div>
 
                         </div>

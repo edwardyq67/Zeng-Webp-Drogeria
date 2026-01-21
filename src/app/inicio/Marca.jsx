@@ -8,10 +8,17 @@ function Marca() {
     const [searchTerm, setSearchTerm] = useState('');
     const partners = marcasData.partners;
 
+    // Función para obtener el nombre legible de la marca
+    const getBrandName = (logoPath) => {
+        const fileName = logoPath.split('/').pop().split('.')[0];
+        // Decodificar %20 a espacios y reemplazar guiones bajos
+        return decodeURIComponent(fileName).replace(/_/g, ' ');
+    };
+
     // Filtrar partners por término de búsqueda
     const filteredPartners = partners.filter(partner => {
-        const logoName = partner.logo.split('/').pop().split('.')[0].toLowerCase();
-        return logoName.includes(searchTerm.toLowerCase());
+        const brandName = getBrandName(partner.logo).toLowerCase();
+        return brandName.includes(searchTerm.toLowerCase());
     });
 
     return (
@@ -78,77 +85,83 @@ function Marca() {
 
             {/* Grid de marcas */}
             <div className="container mx-auto px-4 pb-12">
-                <div className="grid grid-cols-1sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 md:gap-6">
-                    {filteredPartners.map((partner) => (
-                        <div
-                            key={partner.id}
-                            className={`group relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border ${partner.pdfs && partner.pdfs.length > 0
-                                    ? 'border-primary/20 hover:border-primary/40'
-                                    : 'border-gray-200'
-                                }`}
-                        >
-                            {/* Logo */}
-                            <div className="p-6 flex items-center justify-center h-40">
-                                <img
-                                    src={partner.logo}
-                                    alt={`Logo ${partner.logo.split('/').pop().split('.')[0]}`}
-                                    className="max-h-24 max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
-                                />
-                            </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 md:gap-6">
+                    {filteredPartners.map((partner) => {
+                        const brandName = getBrandName(partner.logo);
+                        
+                        return (
+                            <div
+                                key={partner.id}
+                                className={`group relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden border ${partner.pdfs && partner.pdfs.length > 0
+                                        ? 'border-primary/20 hover:border-primary/40'
+                                        : 'border-gray-200'
+                                    }`}
+                            >
+                                {/* Logo */}
+                                <div className="p-6 flex items-center justify-center h-40">
+                                    <img
+                                        src={partner.logo}
+                                        alt={`Logo ${brandName}`}
+                                        className="max-h-24 max-w-full object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                                        onError={(e) => {
+                                            e.target.onerror = null;
+                                            e.target.src = "https://via.placeholder.com/150x75?text=Logo+No+Disponible";
+                                        }}
+                                    />
+                                </div>
 
-                            {/* Footer con botones PDF */}
-                            <div className="px-4 pb-4">
-                                <h3 className="text-center text-sm font-medium text-gray-700 mb-3 truncate">
-                                    {partner.logo.split('/').pop().split('.')[0].replace(/_/g, ' ')}
-                                </h3>
+                                {/* Footer con botones PDF */}
+                                <div className="px-4 pb-4">
+                                    <h3 className="text-center text-sm font-medium text-gray-700 mb-3 truncate">
+                                        {brandName}
+                                    </h3>
 
-                                {partner.pdfs && partner.pdfs.length > 0 ? (
-                                    <div className="space-y-2">
-                                        {/* Solo mostrar máximo 2 botones */}
-                                        {partner.pdfs.slice(0, 1).map((pdf, index) => (
-                                            <a
-                                                key={index}
-                                                href={pdf}
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                className="w-full bg-primary text-white hover:bg-primary-600 border border-primary rounded-lg flex flex-row items-center justify-center gap-2 px-3 py-2 text-sm font-semibold transition-all duration-300 transform hover:scale-[1.02] hover:shadow-md group"
-                                            >
-                                                <FileText className="w-4 h-4" />
-                                                <span>Ver Catálogo {partner.pdfs.length > 1 ? index + 1 : ''}</span>
-                                            </a>
-                                        ))}
-
-                                        {/* Si hay más de 2 PDFs, mostrar indicador con iconos clickeables */}
-                                        {partner.pdfs.length > 2 && (
-                                            <div className="flex items-center justify-center space-x-1 pt-1">
-                                                {partner.pdfs.slice(1, 6).map((pdf, index) => (
-                                                    <a
-                                                        key={index}
-                                                        href={pdf}
-                                                        target="_blank"
-                                                        rel="noopener noreferrer"
-                                                        className="text-primary hover:text-primary-600 transition-colors"
-                                                        title={`Catálogo ${index + 3}`}
-                                                    >
-                                                        <FileText className="w-4 h-4" />
-                                                    </a>
-                                                ))}
-                                                {partner.pdfs.length > 6 && (
-                                                    <span className="text-xs text-gray-500">
-                                                        +{partner.pdfs.length - 6}
+                                    {partner.pdfs && partner.pdfs.length > 0 ? (
+                                        <div className="space-y-2">
+                                            {/* Mostrar máximo 2 botones principales */}
+                                            {partner.pdfs.slice(0, 2).map((pdf, index) => (
+                                                <a
+                                                    key={index}
+                                                    href={pdf}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="w-full bg-primary text-white hover:bg-primary-600 border border-primary rounded-lg flex flex-row items-center justify-center gap-2 px-3 py-2 text-sm font-semibold transition-all duration-300 transform hover:scale-[1.02] hover:shadow-md"
+                                                >
+                                                    <FileText className="w-4 h-4" />
+                                                    <span>
+                                                        {partner.pdfs.length === 1 ? 'Ver Catálogo' : `Catálogo ${index + 1}`}
                                                     </span>
-                                                )}
-                                            </div>
-                                        )}
-                                    </div>
-                                ) : (
-                                    <div className="text-center py-2">
-                                        <span className="text-gray-400 text-sm">Sin catálogo digital</span>
-                                    </div>
-                                )}
+                                                </a>
+                                            ))}
+
+                                            {/* Si hay más de 2 PDFs, mostrar iconos adicionales */}
+                                            {partner.pdfs.length > 2 && (
+                                                <div className="flex flex-wrap items-center justify-center gap-1 pt-1">
+                                                    <span className="text-xs text-gray-500 mr-1">Más:</span>
+                                                    {partner.pdfs.slice(2).map((pdf, index) => (
+                                                        <a
+                                                            key={index + 2}
+                                                            href={pdf}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            className="text-primary hover:text-primary-600 transition-colors"
+                                                            title={`Catálogo ${index + 3}`}
+                                                        >
+                                                            <FileText className="w-4 h-4" />
+                                                        </a>
+                                                    ))}
+                                                </div>
+                                            )}
+                                        </div>
+                                    ) : (
+                                        <div className="text-center py-2">
+                                            <span className="text-gray-400 text-sm">Sin catálogo digital</span>
+                                        </div>
+                                    )}
+                                </div>
                             </div>
-                        </div>
-                    ))}
+                        );
+                    })}
                 </div>
 
                 {/* Mensaje si no hay resultados */}
