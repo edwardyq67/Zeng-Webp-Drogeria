@@ -1,7 +1,9 @@
+// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer/Footer';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,9 +30,13 @@ export default function RootLayout({
         {/* Para asegurar que Next.js maneje el favicon correctamente */}
         <link rel="manifest" href="/manifest.json" />
       </head>
-      <body className={` antialiased`}>
+      <body 
+        className={` antialiased`}
+        suppressHydrationWarning={true}
+      >
         <Header />
         <main className="">{children}</main>
+        <Footer />
       </body>
     </html>
   );

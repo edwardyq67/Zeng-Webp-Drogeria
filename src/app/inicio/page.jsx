@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Play, MapPin, Phone } from 'lucide-react';
+import { Play, MapPin, Phone, MessageCircle, MessageSquare, Eye, Target } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -11,13 +11,13 @@ import CallToAction from './CallToAction';
 import Services from './Services';
 import Contacto from './Contacto';
 import marcasData from '@/lib/json/marcas.json';
-
+import contactoData from '@/lib/json/data.json';
 function HomePage() {
     const [isVideoOpen, setIsVideoOpen] = useState(false);
 
     // Usamos los partners desde el JSON
     const partners = marcasData.partners;
-
+const contacto = contactoData.contacto;
     return (
         <main className="min-h-screen grid gap-8 md:gap-20 bg-background font-sans">
             {/* Sección Hero */}
@@ -25,7 +25,7 @@ function HomePage() {
                 {/* Imagen de fondo */}
                 <div className="relative h-[70vh] md:h-[80vh] lg:h-[90vh]">
                     <img
-                        src="/Imagenes/img1Principal.jpeg"
+                        src="/Imagenes/calidad 1.png"
                         alt="Hero background"
                         className="w-full h-full object-cover object-top"
                     />
@@ -112,9 +112,8 @@ function HomePage() {
                                     </button>
 
                                     {/* Texto descriptivo */}
-                                    <p className="text-black text-sm md:text-base lg:text-lg leading-relaxed max-w-lg">
-                                        CATÁLOGO CORPORATIVO DE PRODUCTOS
-                                        FARMACÉUTICOS Y DISPOSITIVOS MÉDICOS
+                                    <p className="text-black uppercase text-sm md:text-base lg:text-lg leading-relaxed max-w-lg">
+                                       Distribución eficiente, disponibilidad asegurada
                                     </p>
 
                                     {/* Información de contacto */}
@@ -124,16 +123,36 @@ function HomePage() {
                                                 <MapPin className="w-4 h-4 md:w-5 md:h-5 text-primary" />
                                             </div>
                                             <span className="text-gray-700 text-sm md:text-base">
-                                                Calle María José de Arce 261 -San Miguel, Lima
+                                                {contacto.direccion}
                                             </span>
                                         </div>
-                                        <div className="flex items-center gap-2">
-                                            <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                                                <Phone className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                                        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+                                            <div className="flex items-center gap-2">
+                                                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                                    <Phone className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                                                </div>
+                                                <a
+                                                    href={contacto.WhatsApp1}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-gray-700 text-sm md:text-base hover:text-primary transition-colors"
+                                                >
+                                                    {contacto.telefono1}
+                                                </a>
                                             </div>
-                                            <span className="text-gray-700 text-sm md:text-base">
-                                                +51 928 325 277
-                                            </span>
+                                            <div className="flex items-center gap-2">
+                                                <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
+                                                    <Phone className="w-4 h-4 md:w-5 md:h-5 text-primary" />
+                                                </div>
+                                                <a
+                                                    href={contacto.WhatsApp2}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="text-gray-700 text-sm md:text-base hover:text-primary transition-colors"
+                                                >
+                                                    {contacto.telefono2}
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -168,9 +187,8 @@ function HomePage() {
                     </div>
                 </div>
             )}
-
             {/* Sección Quiénes Somos */}
-            <section id='Nosotros' className="pb-12 md:pb-16 lg:pb-20 px-4">
+            <section id='Nosotros' className=" px-4">
                 <div className="max-w-6xl mx-auto">
 
                     {/* Encabezado */}
@@ -204,7 +222,7 @@ function HomePage() {
                             <div className="bg-white p-6 md:p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                                 <div className="flex items-start gap-4">
                                     <div className="flex-shrink-0 w-12 h-12 bg-primary/5 rounded-lg flex items-center justify-center">
-                                        <i className="fas fa-eye text-primary text-lg"></i>
+                                        <Eye className="w-6 h-6 text-primary" />
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-semibold text-gray-900 mb-3">Nuestra Visión</h3>
@@ -222,7 +240,7 @@ function HomePage() {
                             <div className="bg-white p-6 md:p-8 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-300">
                                 <div className="flex items-start gap-4">
                                     <div className="flex-shrink-0 w-12 h-12 bg-primary/5 rounded-lg flex items-center justify-center">
-                                        <i className="fas fa-bullseye text-primary text-lg"></i>
+                                        <Target className="w-6 h-6 text-primary" />
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-semibold text-gray-900 mb-3">Nuestra Misión</h3>
@@ -238,49 +256,57 @@ function HomePage() {
 
                         </div>
 
-                        {/* Columna derecha - Imagen y Reseñas */}
+                        {/* Columna derecha - Imagen y WhatsApp */}
                         <div className="relative">
 
                             {/* Imagen principal */}
-                            <div className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden mb-6">
+                            <div className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden mb-8">
                                 <img
-                                    src="/Imagenes/img2Principal.jpeg"
+                                    src="/Imagenes/calidad 2.png"
                                     alt="Entorno farmacéutico profesional"
                                     className="w-full h-full object-cover"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                             </div>
+
                             {/* Tarjeta de contacto WhatsApp */}
-                            <div className=" p-5 rounded-xl border shadow-sm -mt-10 mx-4 relative z-10">
-                                {/* Botones de WhatsApp */}
-                                <div className="flex justify-between gap-2">
-                                    <a
-                                        href="https://wa.me/51960330535"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center justify-center gap-2 px-4 py-2.5 bg-[#25D366] text-white rounded-lg hover:bg-[#1da851] transition-all duration-300 hover:scale-[1.02] min-w-[180px]"
-                                    >
-                                        <i className="fab fa-whatsapp"></i>
-                                        <div className="text-left">
-                                            <div className="text-xs opacity-90">WhatsApp</div>
-                                            <div className="font-semibold">+51 960 330 535</div>
-                                        </div>
-                                    </a>
+                            <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-lg -mt-16 mx-4 relative z-10">
+                                <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+                                    {/* Texto informativo */}
+                                    <div className="text-center sm:text-left">
+                                        <h3 className="font-semibold text-gray-800 mb-1">Contáctanos por WhatsApp</h3>
+                                        <p className="text-sm text-gray-600">Atención inmediata y personalizada</p>
+                                    </div>
 
-                                    <a
-                                        href="https://wa.me/51938325277"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="flex items-center justify-center gap-2 px-4 py-2.5 bg-[#075E54] text-white rounded-lg hover:bg-[#064c43] transition-all duration-300 hover:scale-[1.02] min-w-[180px]"
-                                    >
-                                        <i className="fab fa-whatsapp"></i>
-                                        <div className="text-left">
-                                            <div className="text-xs opacity-90">WhatsApp</div>
-                                            <div className="font-semibold">+51 938 325 277</div>
-                                        </div>
-                                    </a>
+                                    {/* Botones de WhatsApp */}
+                                    <div className="flex flex-col xs:flex-row gap-3">
+                                        <a
+                                            href="https://wa.me/51960330535"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-lg hover:from-green-600 hover:to-emerald-700 transition-all duration-300 hover:scale-[1.02] min-w-[180px]"
+                                        >
+                                            <Phone className="w-5 h-5" />
+                                            <div className="text-left">
+                                                <div className="text-sm font-medium">WhatsApp 1</div>
+                                                <div className="text-xs">960 330 535</div>
+                                            </div>
+                                        </a>
+
+                                        <a
+                                            href="https://wa.me/51938325277"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-teal-600 to-cyan-700 text-white rounded-lg hover:from-teal-700 hover:to-cyan-800 transition-all duration-300 hover:scale-[1.02] min-w-[180px]"
+                                        >
+                                            <Phone className="w-5 h-5" />
+                                            <div className="text-left">
+                                                <div className="text-sm font-medium">WhatsApp 2</div>
+                                                <div className="text-xs">938 325 277</div>
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
-
                             </div>
 
                         </div>

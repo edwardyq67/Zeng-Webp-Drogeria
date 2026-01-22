@@ -28,10 +28,10 @@ function Marca() {
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center">
                         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-                            Marcas y Proveedores
+                            Nuestros Proveedores
                         </h1>
                         <p className="text-lg md:text-xl text-white/90 mb-8">
-                            Trabajamos con las mejores marcas farmacéuticas y proveedores médicos
+                            Trabajamos con las mejores farmacéuticas y proveedores médicos
                         </p>
 
                         {/* Barra de búsqueda */}
@@ -65,7 +65,7 @@ function Marca() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <div className="text-center">
                             <div className="text-3xl md:text-4xl font-bold text-primary">{partners.length}</div>
-                            <div className="text-gray-600 mt-2">Marcas Totales</div>
+                            <div className="text-gray-600 mt-2">Totales</div>
                         </div>
                         <div className="text-center">
                             <div className="text-3xl md:text-4xl font-bold text-primary">
@@ -170,7 +170,7 @@ function Marca() {
                         <div className="inline-block p-4 bg-gray-100 rounded-full mb-4">
                             <Search className="w-8 h-8 text-gray-400" />
                         </div>
-                        <h3 className="text-xl font-semibold text-gray-700 mb-2">No se encontraron marcas</h3>
+                        <h3 className="text-xl font-semibold text-gray-700 mb-2">No se encontraron farmacéuticas</h3>
                         <p className="text-gray-600">Intenta con otro término de búsqueda</p>
                     </div>
                 )}

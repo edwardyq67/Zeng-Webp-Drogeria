@@ -3,7 +3,10 @@
     "nombre": "Elvis Ayala",
     "cargo": "Logistic Manager",
     "direccion": "Calle María José de Arce 261, San Miguel, Lima, Perú",
-    "telefono": "+51 928 325 277",
+    "telefono1": "+51 960 330 535",
+    "WhatsApp1": "https://wa.me/51960330535",
+    "telefono2": "+51 938 325 277",
+    "WhatsApp2": "https://wa.me/51938325277",
     "email": "logistica@inversionesbienestarzerg.com",
     "logo": "/logo/LOGO.webp"
   }
