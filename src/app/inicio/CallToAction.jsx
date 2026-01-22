@@ -57,7 +57,7 @@ const CallToAction = () => {
     <section 
       className="relative py-8 md:py-12 lg:py-16 px-4 overflow-hidden mx-auto rounded-3xl md:rounded-4xl my-12"
       style={{ 
-        backgroundImage: 'url("/Imagenes/calidad 2.png")',
+        backgroundImage: 'url("/Imagenes/calidad2.webp")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',

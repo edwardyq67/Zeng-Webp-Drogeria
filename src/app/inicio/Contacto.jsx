@@ -281,7 +281,7 @@ function Contacto() {
             <div className="lg:col-span-1">
               <div className="relative h-full min-h-[400px] md:min-h-[500px] rounded-xl overflow-hidden">
                 <img
-                  src="/Imagenes/calidad 2.png"
+                  src="/Imagenes/calidad2.webp"
                   alt="Contacto - Entorno farmacéutico profesional"
                   className="w-full h-full object-cover"
                 />

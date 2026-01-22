@@ -25,7 +25,7 @@ const contacto = contactoData.contacto;
                 {/* Imagen de fondo */}
                 <div className="relative h-[70vh] md:h-[80vh] lg:h-[90vh]">
                     <img
-                        src="/Imagenes/calidad 1.png"
+                        src="/Imagenes/calidad1.webp"
                         alt="Hero background"
                         className="w-full h-full object-cover object-top"
                     />
@@ -262,7 +262,7 @@ const contacto = contactoData.contacto;
                             {/* Imagen principal */}
                             <div className="relative h-[400px] md:h-[500px] rounded-xl overflow-hidden mb-8">
                                 <img
-                                    src="/Imagenes/calidad 2.png"
+                                    src="/Imagenes/calidad2.webp"
                                     alt="Entorno farmacéutico profesional"
                                     className="w-full h-full object-cover"
                                 />
