@@ -1,11 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // Esto genera archivos estáticos
+  output: 'export',  // Esto genera archivos estáticos ✓
   images: {
-    unoptimized: true,  // Necesario para export estático
+    unoptimized: true,  // Necesario para export estático ✓
   },
-  trailingSlash: true,  // Mejor compatibilidad
-
+  trailingSlash: true,  // Mejor compatibilidad ✓
 };
 
-export default nextConfig;
+module.exports = nextConfig;  // ← ¡CAMBIA ESTO!
