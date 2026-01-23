@@ -331,7 +331,7 @@ function PoliticaPrivacidad({ showPrivacyModal, onClose }) {
                       <div>
                         <p className="font-semibold text-gray-900">Correo electrónico</p>
                         <a className="text-primary-600 hover:text-primary-800 transition-colors">
-                          logistica@inversionesbienestarzerg.com
+                          contacto@inversionesbienestarzeng.com
                         </a>
                       </div>
                     </div>

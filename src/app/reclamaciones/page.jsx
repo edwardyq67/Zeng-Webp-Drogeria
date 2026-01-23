@@ -134,7 +134,7 @@ export default function ReclamacionesPage() {
             <p className="text-default-600 text-sm mb-3">
               Nuestro equipo está listo para asistirte en el proceso de reclamo.
             </p>
-            <p className="font-semibold text-default-900">logistica@inversionesbienestarzerg.com</p>
+            <p className="font-semibold text-default-900">contacto@inversionesbienestarzeng.com</p>
             <p className="text-default-600 text-sm">Tel: 938 325 277 / 951 473 340</p>
           </div>
 
@@ -729,7 +729,7 @@ export default function ReclamacionesPage() {
                   </div>
                   <div>
                     <p className="font-semibold mb-1">Correo electrónico</p>
-                    <p className="text-sm break-all">logistica@inversionesbienestarzerg.com</p>
+                    <p className="text-sm break-all">contacto@inversionesbienestarzeng.com</p>
                   </div>
                 </div>
               </div>
