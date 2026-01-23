@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',  // Esto genera archivos estáticos ✓
+  // output: 'export',  // <-- COMENTA o ELIMINA esta línea
   images: {
-    unoptimized: true,  // Necesario para export estático ✓
+    unoptimized: true,
   },
-  trailingSlash: true,  // Mejor compatibilidad ✓
+  trailingSlash: true,
 };
 
-module.exports = nextConfig;  // ← ¡CAMBIA ESTO!
+module.exports = nextConfig;

@@ -40,7 +40,7 @@ $(function () {
 
                     } else {
                         // errtoast.show()
-                        console.log('errorrrrrr')
+                    
                         $('.submit_form').html('Send Message');
                         $('.submit_subscribe').html('Subscribe');
                     }

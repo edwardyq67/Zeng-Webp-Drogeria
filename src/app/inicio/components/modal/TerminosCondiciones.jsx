@@ -73,7 +73,7 @@ function TerminosCondiciones({ showTermsModal, onClose }) {
 
             <ol className="space-y-6 list-decimal pl-5">
               <li className="pl-2">
-                <span className="font-medium">TEKNISOLUTIONS</span>, en adelante LA EMPRESA garantizará los servicios de instalación y mantenimiento correctivo, que realice, así como los productos adquiridos, comprados y/o vendidos, por LA EMPRESA, en conformidad con las condiciones generales que pasan a expresarse y que se dan a conocer a EL CLIENTE, por medio de la presente cotización; en los siguientes términos.
+                <span className="font-medium">ZENG</span>, en adelante LA EMPRESA garantizará los servicios de instalación y mantenimiento correctivo, que realice, así como los productos adquiridos, comprados y/o vendidos, por LA EMPRESA, en conformidad con las condiciones generales que pasan a expresarse y que se dan a conocer a EL CLIENTE, por medio de la presente cotización; en los siguientes términos.
               </li>
 
               <li className="pl-2">
@@ -117,17 +117,17 @@ function TerminosCondiciones({ showTermsModal, onClose }) {
                 <ul className="list-disc pl-5 space-y-1 text-sm">
                   <li>Por seguridad de EL CLIENTE. Deberán mantener alejados de la zona de trabajo a niños y mascotas.</li>
                   <li>Si EL SERVICIO requiere de perforaciones, EL CLIENTE proveerá los planos del ambiente de no contar con los mismos, la realización de EL SERVICIO quedará bajo la responsabilidad de EL CLIENTE.</li>
-                  <li>EL CLIENTE deberá facilitar al técnico de TEKNISOLUTIONS energía eléctrica. Si EL SERVICIO a realizar involucra trabajos en altura, EL CLIENTE deberá proporcionar escaleras o estructuras que permitan llegar al punto de instalación, salvo que la cotización incluya los referidos elementos.</li>
-                  <li>El técnico de TEKNISOLUTIONS solo realizara EL SERVICIO, y los trabajos que este conlleve, por el que fue contratado la empresa, los mismos que se encuentran detallados en la cotización. De haber trabajos adicionales, éstos deberán ser realizados previamente por un tercero de la elección de EL CLIENTE.</li>
+                  <li>EL CLIENTE deberá facilitar al técnico de ZENG energía eléctrica. Si EL SERVICIO a realizar involucra trabajos en altura, EL CLIENTE deberá proporcionar escaleras o estructuras que permitan llegar al punto de instalación, salvo que la cotización incluya los referidos elementos.</li>
+                  <li>El técnico de ZENG solo realizara EL SERVICIO, y los trabajos que este conlleve, por el que fue contratado la empresa, los mismos que se encuentran detallados en la cotización. De haber trabajos adicionales, éstos deberán ser realizados previamente por un tercero de la elección de EL CLIENTE.</li>
                 </ul>
               </li>
 
               <li className="pl-2">
-                Si EL CLIENTE realiza una coordinación adicional que no se encuentre en la cotización, con el técnico de TEKNISOLUTIONS quedará sin efecto la garantía de este por LA EMPRESA.
+                Si EL CLIENTE realiza una coordinación adicional que no se encuentre en la cotización, con el técnico de ZENG quedará sin efecto la garantía de este por LA EMPRESA.
               </li>
 
               <li className="pl-2">
-                Si el técnico de TEKNISOLUTIONS detecta piezas faltantes o dañadas durante el servicio, coordinará con LA EMPRESA para el envío de estas y se reprogramará EL SERVICIO sin costo.
+                Si el técnico de ZENG detecta piezas faltantes o dañadas durante el servicio, coordinará con LA EMPRESA para el envío de estas y se reprogramará EL SERVICIO sin costo.
               </li>
 
               <li className="pl-2">
@@ -159,7 +159,7 @@ function TerminosCondiciones({ showTermsModal, onClose }) {
         <div className="p-6 border-t border-gray-200 bg-gray-50">
           <div className="flex justify-between items-center">
             <div className="text-sm text-gray-600">
-              <span className="font-medium">TEKNISOLUTIONS</span> - Todos los derechos reservados
+              <span className="font-medium">ZENG</span> - Todos los derechos reservados
             </div>
             <button
               onClick={handleCloseTermsModal}

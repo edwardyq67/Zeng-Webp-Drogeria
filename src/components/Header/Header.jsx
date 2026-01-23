@@ -3,27 +3,29 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Image from 'next/image';
-import { Menu, X, Phone, Mail, Building2 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import data from '@/lib/json/data.json';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
   const { contacto } = data;
 
   const menuItems = [
-    { name: 'INICIO', href: '#Inicio' },
-    { name: 'NOSOTROS', href: '#Nosotros' },
-    { name: 'MARCAS', href: '#Marcas' },
-    { name: 'CONTACTO', href: '#Contacto' },
+    { name: 'INICIO', href: pathname === '/' ? '#Inicio' : '/#Inicio' },
+    { name: 'NOSOTROS', href: pathname === '/' ? '#Nosotros' : '/#Nosotros' },
+    { name: 'SERVICIOS', href: pathname === '/' ? '#Servicios' : '/#Servicios' },
+    { name: 'MARCAS', href: pathname === '/' ? '#Marcas' : '/#Marcas' },
+    { name: 'CONTACTO', href: pathname === '/' ? '#Contacto' : '/#Contacto' }
   ];
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -36,11 +38,9 @@ export default function Header() {
           : 'bg-transparent'
       }`}
     >
-      {/* Navegación principal */}
       <div className="transition-all duration-300">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-20">
-            {/* Logo con transparencia condicional */}
             <Link href="/" className="flex items-center">
               <div className={`p-2 rounded-lg mr-3 transition-all duration-300 ${
                 isScrolled 
@@ -72,7 +72,6 @@ export default function Header() {
               </div>
             </Link>
 
-            {/* Menú Desktop */}
             <nav className="hidden lg:flex items-center space-x-8">
               {menuItems.map((item) => (
                 <Link
@@ -92,7 +91,6 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* Botón menú móvil */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={`lg:hidden p-2 rounded-md transition-all duration-300 ${
@@ -111,7 +109,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Menú Móvil */}
         {isMenuOpen && (
           <div className={`lg:hidden animate-in fade-in slide-in-from-top-5 duration-300 ${
             isScrolled 
@@ -134,7 +131,6 @@ export default function Header() {
                     {item.name}
                   </Link>
                 ))}
-
               </div>
             </div>
           </div>
